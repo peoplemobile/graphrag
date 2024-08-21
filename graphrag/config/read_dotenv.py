@@ -22,4 +22,4 @@ def read_dotenv(root: str) -> None:
             if key not in os.environ:
                 os.environ[key] = value or ""
     else:
-        log.info("No .env file found at %s", root)
+        log.warning("No .env file found at %s", root)

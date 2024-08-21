@@ -79,7 +79,7 @@ class LocalQuestionGen(BaseQuestionGen):
             )  # type: ignore
         else:
             context_records = {"context_data": context_data}
-        log.info("GENERATE QUESTION: %s. LAST QUESTION: %s", start_time, question_text)
+        log.debug("GENERATE QUESTION: %s. LAST QUESTION: %s", start_time, question_text)
         system_prompt = ""
         try:
             system_prompt = self.system_prompt.format(
@@ -152,7 +152,7 @@ class LocalQuestionGen(BaseQuestionGen):
             )  # type: ignore
         else:
             context_records = {"context_data": context_data}
-        log.info(
+        log.debug(
             "GENERATE QUESTION: %s. QUESTION HISTORY: %s", start_time, question_text
         )
         system_prompt = ""

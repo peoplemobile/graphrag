@@ -70,7 +70,7 @@ class LocalSearch(BaseSearch):
             **kwargs,
             **self.context_builder_params,
         )
-        log.info("GENERATE ANSWER: %s. QUERY: %s", start_time, query)
+        log.debug("GENERATE ANSWER: %s. QUERY: %s", start_time, query)
         try:
             search_prompt = self.system_prompt.format(
                 context_data=context_text, response_type=self.response_type
@@ -120,7 +120,7 @@ class LocalSearch(BaseSearch):
             conversation_history=conversation_history,
             **self.context_builder_params,
         )
-        log.info("GENERATE ANSWER: %s. QUERY: %s", start_time, query)
+        log.debug("GENERATE ANSWER: %s. QUERY: %s", start_time, query)
         search_prompt = self.system_prompt.format(
             context_data=context_text, response_type=self.response_type
         )
@@ -153,7 +153,7 @@ class LocalSearch(BaseSearch):
             **kwargs,
             **self.context_builder_params,
         )
-        log.info("GENERATE ANSWER: %d. QUERY: %s", start_time, query)
+        log.debug("GENERATE ANSWER: %d. QUERY: %s", start_time, query)
         try:
             search_prompt = self.system_prompt.format(
                 context_data=context_text, response_type=self.response_type

@@ -98,7 +98,7 @@ def try_parse_json_object(input: str) -> tuple[str, dict]:
         # Try parse first
         result = json.loads(input)
     except json.JSONDecodeError:
-        log.info("Warning: Error decoding faulty json, attempting repair")
+        log.warning("Warning: Error decoding faulty json, attempting repair")
 
     if result:
         return input, result
