@@ -214,7 +214,7 @@ class GlobalSearch(BaseSearch):
                 search_response = await self.llm.agenerate(
                     messages=search_messages, streaming=False, **llm_kwargs
                 )
-                log.info("Map response: %s", search_response)
+                log.debug("Map response: %s", search_response)
             try:
                 # parse search response json
                 processed_response = self.parse_search_response(search_response)
